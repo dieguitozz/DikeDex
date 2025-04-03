@@ -49,7 +49,7 @@ export const Modal: React.FC<ModalProps> = ({
         className="fixed inset-0 bg-white/30 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="relative bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto border border-gray-200 shadow-lg [&::-webkit-scrollbar]:w-4 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-400">
+      <div className="relative bg-white dark:bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto shadow-lg [&::-webkit-scrollbar]:w-4 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-gray-700 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-400 dark:hover:[&::-webkit-scrollbar-thumb]:bg-gray-600">
         <button
           onClick={onClose}
           className="absolute top-6 right-6 text-gray-500 hover:text-gray-700"
@@ -61,8 +61,8 @@ export const Modal: React.FC<ModalProps> = ({
 
         <div className="flex flex-col items-center space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold capitalize mb-2">{pokemon.name}</h2>
-            <span className="text-xl text-gray-600">Nº {String(pokemon.id).padStart(3, '000')}</span>
+            <h2 className="text-3xl font-bold capitalize text-gray-600 dark:text-gray-400 mb-2">{pokemon.name}</h2>
+            <span className="text-xl text-gray-600 dark:text-gray-400">Nº {String(pokemon.id).padStart(3, '000')}</span>
           </div>
 
           <div className="relative w-72 h-72">
@@ -77,7 +77,7 @@ export const Modal: React.FC<ModalProps> = ({
             </div>
             {isAnimating && (
               <>
-                <div className="absolute inset-0 bg-white animate-flash" />
+                <div className="absolute inset-0 bg-white dark:bg-gray-800 animate-flash" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="animate-sparkle">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,7 +164,7 @@ export const Modal: React.FC<ModalProps> = ({
               disabled={isAnimating}
               className={`px-4 py-2 rounded-lg cursor-pointer font-medium transition-colors flex items-center gap-2 ${!isShiny
                   ? 'bg-red-500 text-white'
-                  : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                  : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 text-gray-700 dark:text-black'
                 } ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               <Image
@@ -181,7 +181,7 @@ export const Modal: React.FC<ModalProps> = ({
               disabled={isAnimating}
               className={`px-4 py-2 rounded-lg cursor-pointer font-medium transition-colors flex items-center gap-2 ${isShiny
                   ? 'bg-red-500 text-white'
-                  : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                  : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 text-gray-700 dark:text-black'
                 } ${isAnimating ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               <Image

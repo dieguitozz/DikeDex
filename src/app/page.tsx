@@ -110,7 +110,7 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-100 p-8">
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="relative w-16 h-16">
@@ -132,7 +132,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 p-8">
+    <main className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <div className="flex-1">

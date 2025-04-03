@@ -6,4 +6,5 @@ export const metadata: Metadata = {
   icons: {
     icon: "/pokeball.png",
   },
+  themeColor: "#ef4444",
 }; 

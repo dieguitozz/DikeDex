@@ -27,7 +27,7 @@ export const SortButton: React.FC<SortButtonProps> = ({ onSort }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute cursor-pointer right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+        <div className="absolute cursor-pointer right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-10">
           {sortOptions.map((option) => (
             <button
               key={option.value}

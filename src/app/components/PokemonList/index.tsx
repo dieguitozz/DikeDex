@@ -51,7 +51,7 @@ const PokemonList = ({ generations, onPokemonSelect, loading, searchQuery }: Pok
   return (
     <div className="space-y-8">
       {filteredGenerations.map((generation) => (
-        <div key={generation.id} className="bg-white rounded-lg shadow-lg p-6">
+        <div key={generation.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold mb-4 capitalize">Geração {generation.id}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {generation.pokemon.map((pokemon) => {

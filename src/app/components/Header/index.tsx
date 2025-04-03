@@ -1,9 +1,12 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { ThemeSelector } from '../ThemeSelector';
 
 export const Header: React.FC = () => {
   return (
-    <header className="w-full bg-white shadow-md">
+    <header className="w-full bg-white dark:bg-gray-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="relative w-16 h-16">
@@ -19,6 +22,7 @@ export const Header: React.FC = () => {
             Dikédex
           </h1>
         </div>
+        <ThemeSelector />
       </div>
     </header>
   );
